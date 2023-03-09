@@ -5,6 +5,14 @@ body {
 #result{
     display: none;
 }
+span{
+    font-weight: bolder;
+}
+footer{
+    background-color: rgba(210, 105, 30, 0.664) ;
+    margin-top: 50px;
+    display: inline-block;
+}
 .rotate{
     width: 0;
     height: 0;
