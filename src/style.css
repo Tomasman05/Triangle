@@ -1,0 +1,24 @@
+
+body {
+    background-color: darkgoldenrod !important;
+}
+#result{
+    display: none;
+}
+.rotate{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 80px 160px 80px;
+    border-color: transparent transparent gold transparent;
+    animation: triangle 3s infinite linear;
+    margin: 3rem;
+    }
+@keyframes triangle{
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
