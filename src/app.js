@@ -7,7 +7,7 @@ calcButton.addEventListener("click", ()=>{
     const height = Number (heightInput.value)
     let area = calcArea(base, height)
     result.style.display="block"
-    areaResult.value=area
+    areaResult.value=area+" cm²"
     deleteInputs()
 })
 function calcArea(base, height) {
