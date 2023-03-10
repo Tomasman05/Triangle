@@ -8,6 +8,8 @@ if(calcButton){
     })
 }
 function calculate(){
+    checkInput(baseInput.value);
+    checkInput(heightInput.value);
     const base = Number (baseInput.value)
     const height = Number (heightInput.value)
     let area = calcArea(base, height)
@@ -26,6 +28,10 @@ if(baseInput && heightInput){
 function calcArea(base, height) {
     let area = (height*base)/2
     return area
+}
+function checkInput(input){
+    let res =input.match(/^[0-9]+$/)
+    return res
 }
 function deleteInputs(){
     baseInput.value=""
