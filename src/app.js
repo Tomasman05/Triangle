@@ -8,14 +8,22 @@ if(calcButton){
     })
 }
 function calculate(){
-    checkInput(baseInput.value);
-    checkInput(heightInput.value);
-    const base = Number (baseInput.value)
-    const height = Number (heightInput.value)
-    let area = calcArea(base, height)
-    result.style.display="block"
-    areaResult.value=area+" cm²"
-    deleteInputs()
+    let resBase = checkInput(baseInput.value)
+    let resHeight = checkInput(heightInput.value)
+    if(resBase&&resHeight){
+        const base = Number (baseInput.value)
+        const height = Number (heightInput.value)
+        let area = calcArea(base, height)
+        result.style.display="block"
+        areaResult.value=area+" cm²"
+        deleteInputs()
+    }
+    else if (baseInput.value=="" || heightInput.value=="") {
+        alert("Nincs adat")
+    }
+    else{
+        alert("Hibás adattípus")
+    }
 }
 if(baseInput && heightInput){
     baseInput.addEventListener("click", ()=>{
